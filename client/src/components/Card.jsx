@@ -1,13 +1,13 @@
-function Card() {
+import { NavLink } from "react-router-dom";
+/* eslint-disable react/prop-types */
+function Card({ char }) {
   return (
     <>
-      <h1> I am a card</h1>
       <figure>
-        <img
-          src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-          alt="Rick Sanchez"
-        />
-        <figcaption>Rick Sanchez</figcaption>
+        <NavLink to={`/detail/${char.id}`}>
+          <img src={char.image} alt={char.name} />
+          <figcaption>{char.name}</figcaption>
+        </NavLink>
       </figure>
     </>
   );

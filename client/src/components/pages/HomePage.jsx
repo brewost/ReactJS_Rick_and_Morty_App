@@ -1,4 +1,5 @@
 import Card from "../Card";
+import NoCharCard from "../NoCharCard";
 import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
 
@@ -19,6 +20,10 @@ function HomePage() {
         value={text}
         onChange={handleChange}
       />
+      {text &&
+        !data.results.some((result) =>
+          result.name.toLowerCase().includes(text.toLowerCase()),
+        ) && <NoCharCard />}
       {data.results.map((char) => {
         return (
           char.name.toLowerCase().includes(text.toLowerCase()) && (

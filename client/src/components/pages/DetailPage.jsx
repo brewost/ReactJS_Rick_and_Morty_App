@@ -21,4 +21,3 @@ function DetailPage() {
   );
 }
 export default DetailPage;
-// random comment

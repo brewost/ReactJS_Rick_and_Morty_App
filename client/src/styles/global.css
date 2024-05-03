@@ -1,22 +1,46 @@
 :root {
-	--main-color: #272B33;
-	--second-color: #474C50;
-	--third-color: #E3E2E2;
+  --main-color: #272b33;
+  --second-color: #474c50;
+  --third-color: #e3e2e2;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	margin: 0;
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul {
-	margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
 }
 
 ul {
-	list-style-type: none;
+  list-style-type: none;
   padding: 0;
+}
+
+.dark {
+  background-color: Var(--main-color);
+  color: var(--third-color);
+}
+.light {
+  background-color: var(--third-color);
+  color: Var(--main-color);
+}
+.logo {
+  height: 70px;
+  width: 70px;
+}
+.foot-logo {
+  height: 70px;
+  width: 70px;
 }

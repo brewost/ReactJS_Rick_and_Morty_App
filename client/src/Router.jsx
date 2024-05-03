@@ -3,11 +3,12 @@ import App from "./App";
 import HomePage from "./components/pages/HomePage";
 import LoginPage from "./components/pages/LoginPage";
 import DetailPage from "./components/pages/DetailPage";
+import ErrorPage from "./components/pages/ErrorPage";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: "U DONE FUCKED IT UP",
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "",

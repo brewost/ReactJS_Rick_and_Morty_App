@@ -13,13 +13,16 @@ function HomePage() {
   const data = useLoaderData();
   return (
     <>
-      <h1> I am a homepage</h1>
       <input
         type="text"
         placeholder="Who are you looking for?"
         value={text}
         onChange={handleChange}
       />
+
+      {/* I didn't folloow your instructions and ended up writing this monstrosity */}
+      {/* Below - basically if no letters match - go to empty char card */}
+      {/* Otherwise maps all chars and filters with the input text */}
       {text &&
         !data.results.some((result) =>
           result.name.toLowerCase().includes(text.toLowerCase()),

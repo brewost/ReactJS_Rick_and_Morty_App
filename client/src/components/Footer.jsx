@@ -1,4 +1,10 @@
 function Footer() {
-  return <h1> I am a footer</h1>;
+  return (
+    <img
+      className="foot-logo"
+      src="src/assets/facebook_icon.png"
+      alt="facebook logo"
+    />
+  );
 }
 export default Footer;

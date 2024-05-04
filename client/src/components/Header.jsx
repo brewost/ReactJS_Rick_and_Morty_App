@@ -5,17 +5,23 @@ function Header() {
 
   return (
     <>
-      <img
-        className="logo"
-        src="src/assets/rick_logo.png"
-        alt="shadow of rick"
-      />
-      <ul>
-        <NavLink to={urlbase}>HomePage</NavLink>
-        <NavLink to={urlbase + "/login"}>Login</NavLink>
-      </ul>
+      <div className="head">
+        <div>
+          <img
+            className="head-logo"
+            src="src/assets/rick_logo.png"
+            alt="shadow of rick"
+          />
+        </div>
+        <div className="link-box">
+          <div className="links">
+            <NavLink to={urlbase}>HomePage</NavLink>
+            <NavLink to={urlbase + "/login"}>Login</NavLink>
+          </div>
 
-      <ToggleTheme />
+          <ToggleTheme />
+        </div>
+      </div>
     </>
   );
 }

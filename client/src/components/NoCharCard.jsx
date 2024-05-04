@@ -1,8 +1,12 @@
 function NoCharCard() {
   return (
     <>
-      <h1>Nope - no one by that name here</h1>
-      <img src="src/assets/mehRick.png" alt="unsure rick" />
+      <h1>Nope - no one by that name here...</h1>
+      <img
+        className="no-char-img"
+        src="src/assets/mehRick.png"
+        alt="unsure rick"
+      />
     </>
   );
 }

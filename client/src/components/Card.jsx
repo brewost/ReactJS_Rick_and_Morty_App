@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 function Card({ char }) {
   return (
     <>
-      <figure>
+      <figure className="card">
         <NavLink to={`/detail/${char.id}`}>
-          <img src={char.image} alt={char.name} />
-          <figcaption>{char.name}</figcaption>
+          <img className="card-img" src={char.image} alt={char.name} />
+          <figcaption className="card-name">{char.name}</figcaption>
         </NavLink>
       </figure>
     </>

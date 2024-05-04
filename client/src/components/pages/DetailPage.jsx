@@ -3,21 +3,31 @@ function DetailPage() {
   const charData = useLoaderData();
   // return <figure>{charData && charData.name}</figure>;
   return (
-    <>
-      {charData ? (
-        <figure>
-          <img src={charData.image} alt={charData.name} />
-          <h1>{charData.name}</h1>
-          <h2>
-            {charData.status} - {charData.species}
-          </h2>
-          <h2>Planet of origin: {charData.origin.name}</h2>
-          <h2>Last known whereabouts: {charData.location.name}</h2>
-        </figure>
-      ) : (
-        <div>LOADING</div>
-      )}
-    </>
+    <div className="detail-page">
+      <>
+        {charData ? (
+          <figure className="detail-card">
+            <div>
+              <img
+                className="detail-image"
+                src={charData.image}
+                alt={charData.name}
+              />
+            </div>
+            <div className="detail-words">
+              <h1>{charData.name}</h1>
+              <h2>
+                {charData.status} - {charData.species}
+              </h2>
+              <h3>Planet of origin: {charData.origin.name}</h3>
+              <h3>Last known whereabouts: {charData.location.name}</h3>
+            </div>
+          </figure>
+        ) : (
+          <div>LOADING</div>
+        )}
+      </>
+    </div>
   );
 }
 export default DetailPage;
